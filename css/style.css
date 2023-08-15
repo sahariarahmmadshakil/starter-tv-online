@@ -234,6 +234,7 @@ body {
     padding: 10px;
     font-size: 24px;
 }
+
 .carosoul-paragraph-4 {
     padding: 10px;
     font-size: 24px;
@@ -334,6 +335,11 @@ body {
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
     margin-left: 12px;
+
+}
+
+.about-video {
+    overflow: hidden;
 }
 
 .button-area {
@@ -569,14 +575,31 @@ a:hover {
     height: 90px;
     margin-top: -95px;
 }
-.carousel-control-next, .carousel-control-prev{
+
+.carousel-control-next,
+.carousel-control-prev {
     width: 10%;
 }
-.carousel-caption{
+
+.carousel-caption {
     left: 10%;
     right: 10%;
 }
+
+.yt-video {
+    height: 315px;
+    width: 560px;
+    display: block;
+    margin: 0 auto;
+}
+
 @media screen and (max-width: 576px) {
+    .yt-video {
+        height: 150px;
+        width: 270px;
+      
+    }
+
     .tablet-dropdown {
         display: block;
     }
@@ -733,6 +756,7 @@ a:hover {
         padding: 4px;
         font-size: 12px;
     }
+
     .carosoul-paragraph-4 {
         padding: 4px;
         font-size: 11px;
@@ -926,6 +950,7 @@ a:hover {
     .dropdown-pc {
         display: none;
     }
+
     #home {
         height: 10px;
         margin-top: -10px;
@@ -965,8 +990,15 @@ a:hover {
         height: 90px;
         margin-top: -90px;
     }
+
     .button-area {
-    width: 50%;
-    margin-bottom: 30px;
-}
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .yt-video {
+        height: 150px;
+        width: 270px;
+        display: block;
+        margin: 0 auto;
+    }
 }

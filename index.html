@@ -103,6 +103,23 @@
             formId: '64b9837bcd56042d78f06e43'
         });
     </script>
+    <style>
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%;
+            /* 16:9 aspect ratio */
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 
 </head>
 
@@ -199,9 +216,11 @@
 
                     <!-- first carosoul  -->
                     <div class="carousel-item active">
-                        <video src="videos/driven-1.webm" autoplay loop class="w-100">
-                            Your browser does not support the HTML5 Video element.
-                        </video>
+                        <div class="video-container">
+                            <iframe id="player1"
+                                src="https://www.youtube.com/embed/ZkBEb3rjv_o?autoplay=1&controls=0&rel=0&loop=1&playlist=ZkBEb3rjv_o"
+                                frameborder="0" allowfullscreen allow="autoplay"></iframe>
+                        </div>
                         <div class="carousel-caption carousel-text ">
                             <div class="fcb-area  ">
                                 <div class="carosoul-content">
@@ -218,9 +237,11 @@
                     </div>
                     <!-- second carosoul  -->
                     <div class="carousel-item ">
-                        <video src="videos/driven-2.webm" autoplay loop class="w-100">
-                            Your browser does not support the HTML5 Video element.
-                        </video>
+                        <div class="video-container">
+                            <iframe id="player2"
+                                src="https://www.youtube.com/embed/-KlLhBzcem0?autoplay=1&controls=0&rel=0&loop=1&playlist=-KlLhBzcem0"
+                                frameborder="0" allowfullscreen allow="autoplay"></iframe>
+                        </div>
                         <div class="carousel-caption carousel-text-2 ">
                             <div class="fcb-area-2 ">
                                 <div class="second-carosoul-content">
@@ -239,9 +260,11 @@
 
                     <!-- third carosoul -->
                     <div class="carousel-item">
-                        <video src="videos/driven-3.webm" autoplay loop class="w-100">
-                            Your browser does not support the HTML5 Video element.
-                        </video>
+                        <div class="video-container">
+                            <iframe id="player3"
+                                src="https://www.youtube-nocookie.com/embed/9htJgArq2nQ?autoplay=1&controls=0&rel=0&loop=1&playlist=9htJgArq2nQ"
+                                frameborder="0" allowfullscreen allow="autoplay"></iframe>
+                        </div>
                         <div class="carousel-caption third-carousel-text ">
                             <div class="fcb-area-2">
                                 <div class="second-carosoul-content">
@@ -259,9 +282,11 @@
                     </div>
                     <!-- fourth carosoul  -->
                     <div class="carousel-item ">
-                        <video src="videos/driven-4.webm" autoplay loop class="w-100">
-                            Your browser does not support the HTML5 Video element.
-                        </video>
+                        <div class="video-container">
+                            <iframe id="player4"
+                                src="https://www.youtube-nocookie.com/embed/XiuYx4cljo4?autoplay=1&controls=0&rel=0&loop=1&playlist=XiuYx4cljo4"
+                                frameborder="0" allowfullscreen allow="autoplay"></iframe>
+                        </div>
                         <div class="carousel-caption fourth-carousel-text ">
                             <div class="fcb-area-2">
                                 <div class="second-carosoul-content">
@@ -351,7 +376,7 @@
                 <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
 
                     <video autoplay loop muted class="img-fluid video-div" id="vid">
-                        <source src="videos/about.webm" type="video/webm" />
+                        <source src="https://sahariarahmmadshakil.github.io/starter-tv-online/videos/about.webm" type="video/webm" />
                     </video>
                     <script>
                         document.getElementById('vid').play();
@@ -394,11 +419,9 @@
 
                             </ul>
                         </div>
-                        <div>
-                            <video controls="controls" src="videos/video.webm" class="w-100">
-                                Your browser does not support the HTML5 Video element.
-                            </video>
-                        </div>
+                          <div class="w-100">
+                            <iframe  src="https://www.youtube.com/embed/p0VQEqBaXxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="yt-video"></iframe>
+                          </div>
 
                         <div class=" px-sm-2  " id="form-area-bg">
                             <div id="fd-form-637017795b16fe9549ad7e40"></div>
@@ -593,7 +616,7 @@
 
                                         One thing we were absolutely intentional about was showcasing and
                                         supporting black-owned businesses as our filming locations for DRIVEN.<br>
-                                      <!-- link area    -->
+                                        <!-- link area    -->
                                         <a href="blogs/driven_locations.html" target="_blank"
                                             class="read-more text-danger">Read more...</a>
                                     </p>
@@ -781,6 +804,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <script>
+        const iframe = document.getElementById('youtube-iframe');
+        iframe.addEventListener('load', function () {
+            const player = new YT.Player(iframe);
+            player.setLoop(true);
+        });
+    </script>
+
+    <!-- Load the YouTube iframe API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        function playVideos() {
+            document.getElementById('player1').src += '&autoplay=1';
+            document.getElementById('player2').src += '&autoplay=1';
+            document.getElementById('player3').src += '&autoplay=1';
+            document.getElementById('player4').src += '&autoplay=1';
+            // Repeat the above line for the other videos
+        }
+
+        window.onload = playVideos;
+    </script>
 </body>
 
 </html>
