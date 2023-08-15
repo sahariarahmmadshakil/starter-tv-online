@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://kit.fontawesome.com/73bff469e1.js" crossorigin="anonymous"></script>
+    <title>Starther TV</title>
+    <link rel="icon" type="favicon" href="images/favicon.ico">
+    <script>
+        // Get all the elements with the class 'openModalLink' (all the <a> tags)
+        const openModalLinks = document.querySelectorAll('.openModalLink');
+
+        // Function to handle actions when opening the modal from <a> tags (Optional)
+        function onOpenModalFromLink(event) {
+            event.preventDefault(); // Prevent the default behavior of <a> tag
+            // Add your specific actions or operations here
+            console.log("Modal opened from link!");
+        }
+
+        // Attach the onOpenModalFromLink function to the click event of each 'openModalLink' element (Optional)
+        openModalLinks.forEach(link => {
+            link.addEventListener('click', onOpenModalFromLink);
+        });
+
+    </script>
+    <style>
+        body {
+            background-color: #ebecf0;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        body {
+            position: relative
+        }
+
+        * {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .common-color-sayan {
+            color: #708b89;
+        }
+
+        .nav-color {
+            background-color: #f6f2ea;
+        }
+
+        .nav-width {
+            max-width: 1366px;
+        }
+
+        .main,
+        .header {
+            max-width: 1366px;
+            margin: auto;
+        }
+
+        .nav-text-color {
+            color: #df8c57 !important;
+            font-size: 15px;
+        }
+
+        .corner-logo {
+            width: 25%;
+        }
+
+        .starter-logo {
+            width: 75%;
+        }
+
+        .navbar-nav .nav-item.active .nav-link,
+        .navbar-nav .nav-item:hover .nav-link {
+            color: #df8656;
+        }
+
+        .dropdown-menu>li:hover a {
+            color: #1e1d1d !important;
+            background-color: #DF8656 !important;
+            transition: 0.9s;
+        }
+
+        a:hover {
+            color: #1e1d1d !important;
+            text-decoration: none !important;
+            transition: 0.7s;
+        }
+
+        .top-nav-image {
+            width: 28%;
+        }
+
+        .dropdown-menu li {
+            position: relative;
+        }
+
+        .dropdown-menu .dropdown-submenu {
+            display: none;
+            position: absolute;
+            left: 60%;
+            top: 35px;
+            z-index: -9999;
+        }
+
+        .dropdown-menu .dropdown-submenu-left {
+            right: 100%;
+            left: auto;
+        }
+
+        .dropdown-menu>li:hover>.dropdown-submenu {
+            display: block;
+        }
+
+        .mobile-top-image {
+            display: none;
+        }
+
+        .driven-logo {
+            width: 40%;
+        }
+
+        .ladies-cover {
+            background-image: url('images/ladies-cover.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 470px;
+        }
+
+        .cover-overlay {
+            padding: 120px 50px 50px 50px;
+        }
+
+        .streaming-btn {
+            background-color: #DF8656;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .card-overlay-content {
+            margin-top: 70px;
+        }
+
+        .card-text {
+            font-size: 18px;
+        }
+
+        .locker {
+            position: absolute;
+            top: 50%;
+            left: 80%;
+        }
+
+        .signup-form-top {
+            display: flex;
+            justify-content: end;
+        }
+
+        .sign-up {
+            padding: 8px 12px;
+            border: none;
+            margin-right: 10px;
+            background-color: #eecac029;
+        }
+
+        .login {
+            padding: 8px 12px;
+            background-color: #EECAC0;
+            border: none;
+        }
+
+        .card-background {
+            background-color: #F7F3EB;
+        }
+
+        .form-area {
+            margin: 10px 100px 26px 48px;
+        }
+
+        .card-content {
+            padding: 10px 48px 10px 48px;
+        }
+
+        .login-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .create-btn {
+            background-color: #eecac0;
+            font-weight: 600;
+            padding: 2px;
+            border: none;
+        }
+
+        .continue-btn {
+            background-color: #bd7c61;
+            font-weight: 600;
+            padding: 5px 5px;
+            border: none;
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        label {
+            font-weight: 600;
+        }
+
+        .sign-in-title {
+            margin-top: 40px;
+        }
+
+        .episods {
+            max-width: 350px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 15px;
+            align-items: center;
+        }
+
+        .tablet-dropdown {
+            display: none;
+        }
+
+        .dropdown-pc {
+            display: block;
+        }
+
+        .watch-driven-area {
+            padding-top: 70px;
+        }
+
+        .nav-top-font {
+            font-size: 24px;
+        }
+
+        /* modal styles  */
+        .modal-dialog {
+            max-width: 1366px;
+            /* New width for default modal */
+        }
+
+        .eposod-cards-info {
+            font-size: 15px;
+            line-height: 16px;
+            color: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .openModalLink {
+            cursor: pointer;
+        }
+
+        .footer {
+            background-image: url('images/footer-image.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .footer-image {
+            width: 25%;
+        }
+
+
+        /* mobile screen  */
+        @media screen and (max-width: 576px) {
+
+            .top-nav-image {
+                width: 100%;
+            }
+
+            .starter-logo {
+                width: 50%;
+            }
+
+            .navbar>.container,
+            .navbar>.container-fluid,
+            .navbar>.container-lg,
+            .navbar>.container-md,
+            .navbar>.container-sm,
+            .navbar>.container-xl,
+            .navbar>.container-xxl {
+                display: flex;
+                flex-wrap: nowrap;
+            }
+
+            .mobile-top-image {
+                display: block;
+
+            }
+
+            .corner-logo {
+                display: none;
+            }
+
+            .driven-logo {
+                width: 50%;
+            }
+
+            .ladies-cover {
+                background-image: url('../images/ladies-cover.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 250px;
+            }
+
+            .cover-overlay {
+                padding: 30px;
+            }
+
+            .streaming-btn {
+                padding: 5px 10px;
+                border: none;
+                border-radius: 10px;
+                font-size: 16px;
+            }
+
+            .card-text {
+                font-size: 18px;
+            }
+
+            .locker {
+                position: absolute;
+                top: 60%;
+            }
+
+            .form-area {
+                margin: 45px
+            }
+
+            .login-area {
+                flex-direction: column;
+            }
+
+            .tablet-dropdown {
+                display: block;
+            }
+
+            .dropdown-pc {
+                display: none;
+            }
+
+            .watch-driven-area {
+                padding-top: 50px;
+            }
+
+            .nav-top-font {
+                font-size: 16px;
+            }
+        }
+
+        @media only screen and (max-width: 992px) and (min-width: 577px) {
+            .corner-logo {
+                display: none;
+            }
+
+            .locker {
+                position: absolute;
+                top: 60%;
+            }
+
+            .form-area {
+                margin: 45px
+            }
+
+            .tablet-dropdown {
+                display: block;
+            }
+
+            .dropdown-pc {
+                display: none;
+            }
+
+            .nav-top-font {
+                font-size: 18px;
+            }
+
+            .watch-driven-area {
+                padding-top: 50px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <section class="mobile-top-image">
+        <img src="images/corner-logo-new.png" alt="" class="img-fluid">
+    </section> -->
+    <header class="header">
+        <nav
+            class="container navbar nav-color fixed-top navbar-expand-lg navbar-expand-xl navbar-expand-xxl  py-0 nav-width">
+            <div class="container-fluid ">
+                <a class="navbar-brand top-nav-image" href="stream-now.html">
+                    <img src="images/logo-pink.png" alt="" class="starter-logo img-fluid ps-4"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end w-75 align-items-center" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: #708b89;">Close</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ps-2 ">
+                            <li class="nav-item ">
+                                <a class="nav-link nav-text-color" aria-current="page" href="index.html">
+                                    <b>BACK HOME</b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-text-color" href="#watch"> <b>WATCH</b></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link nav-text-color" href="#contact"> <b>CONTACT</b></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <img src="images/corner-logo-new.png" alt="" class="corner-logo">
+        </nav>
+    </header>
+    <main class="main container px-0">
+        <section class="watch-driven-area" id="watch-driven">
+            <div class="ladies-cover">
+                <div class="cover-overlay">
+                    <div>
+                        <img src="images/driven-logo.png" alt="" class="img-fluid driven-logo">
+                    </div>
+                    <p class="text-white nav-top-font pe-5"> A day-in-the-life of four women entrepreneurs showcasing
+                        their <br>
+                        process and shedding light on the motivations behind their ambition.
+                    </p>
+                    <div class="test pb-2">
+                        <!-- Modal -->
+                        <button class="streaming-btn" data-bs-toggle="modal" data-bs-target="#myModal">
+                            STREAM NOW</button>
+                        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body pt-0">
+                                        <button type="button" class="btn-close py-2 mt-0" data-bs-dismiss="modal"
+                                            aria-label="Close">
+                                        </button>
+                                        <section style="background-color: #eecac0;">
+                                            <div class="row mx-0">
+                                                <div class=" border-0 rounded-0 col-sm-12 col-md-12 col-lg-6 px-0">
+                                                    <img src="images/Driven-pink.jpg"
+                                                        class="img-fluid border-0 rounded-0" alt="...">
+                                                </div>
+                                                <div class="card border-0 rounded-0  col-sm-12 col-md-12 col-lg-6 px-0">
+                                                    <div class=" border-0 rounded-0 card-background">
+                                                        <div class="signup-form-top px-4 pt-3">
+                                                            <button class="sign-up"><b>Sign up</b></button>
+                                                            <button class="login"><b>Log in</b></button>
+                                                        </div>
+                                                        <div class="card-content">
+                                                            <h1 class="fw-bold">SCREENING PASS</h1>
+                                                            <p class="fs-5">US $34.99 </p>
+                                                            <p class="fs-5">Gain unlimited 3-month access to all four
+                                                                DRIVEN episodes. Watch at your
+                                                                convenience. Be
+                                                                inspired and empowered by the stories of these
+                                                                enterprising women. <br> <br>
+
+                                                                Your support of this "Jumpstart" series helps us
+                                                                continue to produce original content in
+                                                                which black and brown women entrepreneurs take center
+                                                                stage. </p>
+                                                        </div>
+                                                        <form action="#" class="d-flex flex-column gap-3 form-area">
+                                                            <input type="text" placeholder="Name" required>
+                                                            <input type="email" placeholder="Email" required>
+                                                            <input type="password" placeholder="Create Password"
+                                                                required>
+                                                            <button class="create-btn">Create an Account</button>
+                                                            <div class="login-area">
+                                                                <p>Already have an account? <span><a href="#">Log
+                                                                            in</a></span></p>
+                                                                <p><a href="#">Forgot password</a></p>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </section>
+                                        <section>
+                                            <div class="row mx-0">
+                                                <div class=" border-0 rounded-0 col-sm-12 col-md-12 col-lg-6 px-0">
+                                                    <img src="images/Driven-brown.jpg"
+                                                        class="img-fluid border-0 rounded-0" alt="...">
+                                                </div>
+                                                <div class="card border-0 rounded-0  col-sm-12 col-md-12 col-lg-6 px-0">
+                                                    <div class=" border-0 rounded-0 card-background">
+                                                        <div class="card-content">
+                                                            <h1 class="fw-bold sign-in-title">SIGN IN TO YOUR ACCOUNT
+                                                            </h1>
+                                                            <ul class="fs-5">
+                                                                <li>3-month access to all four DRIVEN episodes
+                                                                </li>
+                                                                <li> Watch at your convenience </li>
+                                                                <li> Be inspired and empowered by the stories of these
+                                                                    enterprising women </li>
+                                                            </ul>
+                                                            <br>
+                                                            <p class="fs-5">Your support of this "Jumpstart" series
+                                                                helps us continue to produce
+                                                                original content in
+                                                                which black and brown women entrepreneurs take center
+                                                                stage. </p>
+                                                        </div>
+                                                        <form action="#" class="d-flex flex-column gap-1 form-area">
+                                                            <label for="Name">Email or Username</label>
+                                                            <input type="email">
+                                                            <label for="Name">Password</label>
+                                                            <input type="password" required>
+                                                            <button class="continue-btn">Continue</button>
+                                                            <p class="pt-2"><a href="#">Forgot password</a></p>
+                                                        </form>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-dark px-3 py-3">
+                <div>
+                    <p class="text-white">Episodes</p>
+                </div>
+                <div>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
+                        <div class="col">
+                            <a class="openModalLink" data-bs-toggle="modal" data-bs-target="#myModal">
+                                <div class="card bg-dark border-0">
+                                    <img src="images/img-5.png" class="rounded-3" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-title text-center text-white">Trailer</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="openModalLink" data-bs-toggle="modal" data-bs-target="#myModal">
+                                <div class="card bg-dark border-0">
+                                    <img src="images/img-4.png" class="rounded-3" alt="...">
+                                    <div class="d-flex justify-content-end locker">
+                                        <img src="images/lock.png" alt="" style="width: 40px; " class="me-3">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-title text-center text-white">Driven by Survival</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="openModalLink" data-bs-toggle="modal" data-bs-target="#myModal">
+                                <div class="card bg-dark border-0">
+                                    <img src="images/img-2.png" class="rounded-3" alt="...">
+                                    <div class="d-flex justify-content-end locker">
+                                        <img src="images/lock.png" alt="" style="width: 40px; " class="me-3">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-title text-center text-white">Driven by Mission</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="openModalLink" data-bs-toggle="modal" data-bs-target="#myModal">
+                                <div class="card bg-dark border-0">
+                                    <img src="images/img-1.png" class="rounded-3" alt="...">
+                                    <div class="d-flex justify-content-end locker">
+                                        <img src="images/lock.png" alt="" style="width: 40px; " class="me-3">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-title text-center text-white">Driven by Confidence</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="openModalLink" data-bs-toggle="modal" data-bs-target="#myModal">
+                                <div class="card bg-dark border-0">
+                                    <img src="images/img-3.png" class="rounded-3" alt="...">
+                                    <div class="d-flex justify-content-end locker">
+                                        <img src="images/lock.png" alt="" style="width: 40px; " class="me-3">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-title text-center text-white">Driven by Legacy</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section style="background-color: #eecac0;">
+            <div class="row mx-0">
+                <div class=" border-0 rounded-0 col-sm-12 col-md-12 col-lg-6 px-0">
+                    <img src="images/Driven-pink.jpg" class="img-fluid border-0 rounded-0" alt="...">
+                </div>
+                <div class="card border-0 rounded-0  col-sm-12 col-md-12 col-lg-6 px-0">
+                    <div class=" border-0 rounded-0 card-background">
+                        <div class="signup-form-top px-4 pt-3">
+                            <button class="sign-up"><b>Sign up</b></button>
+                            <button class="login"><b>Log in</b></button>
+                        </div>
+                        <div class="card-content">
+                            <h1 class="fw-bold">SCREENING PASS</h1>
+                            <p class="fs-5">US $34.99 </p>
+                            <p class="fs-5">Gain unlimited 3-month access to all four DRIVEN episodes. Watch at your
+                                convenience. Be
+                                inspired and empowered by the stories of these enterprising women. <br> <br>
+
+                                Your support of this "Jumpstart" series helps us continue to produce original content in
+                                which black and brown women entrepreneurs take center stage. </p>
+                        </div>
+                        <form action="#" class="d-flex flex-column gap-3 form-area">
+                            <input type="text" placeholder="Name" required>
+                            <input type="email" placeholder="Email" required>
+                            <input type="password" placeholder="Create Password" required>
+                            <button class="create-btn">Create an Account</button>
+                            <div class="login-area">
+                                <p>Already have an account? <span><a href="#">Log in</a></span></p>
+                                <p><a href="#">Forgot password</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section>
+            <div class="row mx-0">
+                <div class=" border-0 rounded-0 col-sm-12 col-md-12 col-lg-6 px-0">
+                    <img src="images/Driven-brown.jpg" class="img-fluid border-0 rounded-0" alt="...">
+                </div>
+                <div class="card border-0 rounded-0  col-sm-12 col-md-12 col-lg-6 px-0">
+                    <div class=" border-0 rounded-0 card-background">
+                        <div class="card-content">
+                            <h1 class="fw-bold sign-in-title">SIGN IN TO YOUR ACCOUNT</h1>
+                            <ul class="fs-5">
+                                <li>3-month access to all four DRIVEN episodes
+                                </li>
+                                <li> Watch at your convenience </li>
+                                <li> Be inspired and empowered by the stories of these enterprising women </li>
+                            </ul>
+                            <br>
+                            <p class="fs-5">Your support of this "Jumpstart" series helps us continue to produce
+                                original content in
+                                which black and brown women entrepreneurs take center stage. </p>
+                        </div>
+                        <form action="#" class="d-flex flex-column gap-1 form-area">
+                            <label for="Name">Email or Username</label>
+                            <input type="email">
+                            <label for="Name">Password</label>
+                            <input type="password" required>
+                            <button class="continue-btn">Continue</button>
+                            <p class="pt-2"><a href="#">Forgot password</a></p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section> -->
+        <section class="bg-dark pt-5" id="watch">
+            <!-- //if you use video that goes here -->
+            <!-- <video src=""></video>  -->
+            <div class="bg-dark ">
+                <div>
+                    <img src="images/footer-lady.png" alt="" class="img-fluid">
+                </div>
+                <div class="p-2 px-md-4 pt-3">
+                    <h5 class="text-white">DRIVEN: Episode 3 </h5>
+                    <h5 class="text-white">Breann Cook - Driven by Confidence </h5>
+                    <p class="text-white">Episode description</p>
+                    <p class="text-white"> More Episodes</p>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2 px-4">
+                <div class="col border-0">
+                    <div class="card mb-3 bg-dark rounded-0 border-0" style="max-width: 540px;">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-4">
+                                <img src="images/img-4.png" class="img-fluid rounded-3" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <p class="card-title eposod-cards-info p-0 m-0"><small>Episode 1</small></p>
+                                    <p class="card-text eposod-cards-info p-0 m-0"><small><b>Latricia Wilder - Driven by
+                                                Survival</b></small></p>
+                                    <p class="card-text eposod-cards-info p-0 m-0"><small>21m TV-G</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col border-0">
+                    <div class="card mb-3 bg-dark rounded-0 border-0" style="max-width: 540px;">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-4">
+                                <img src="images/img-2.png" class="img-fluid rounded-3" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <p class="card-title eposod-cards-info p-0 m-0"><small>Episode 2</small></p>
+                                    <p class="card-text eposod-cards-info p-0 m-0"><small><b>Sunny Jones- Driven by
+                                                Mission</b></small></p>
+                                    <p class="card-text eposod-cards-info p-0 m-0"><small>21m TV-G</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col border-0">
+                    <div class="card mb-3 bg-dark rounded-0 border-0" style="max-width: 540px;">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-4">
+                                <img src="images/img-1.png" class="img-fluid rounded-3" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <p class="card-title eposod-cards-info p-0 m-0"><small>Episode 3</small></p>
+                                    <p class="card-text eposod-cards-info p-0 m-0"><small><b>Breann Cook - Driven by
+                                                Confidence</b></small></p>
+                                    <p class="card-text eposod-cards-info p-0 m-0"><small>21m TV-G</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col border-0">
+                    <div class="card mb-3 bg-dark rounded-0 border-0" style="max-width: 540px;">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-4">
+                                <img src="images/img-3.png" class="img-fluid rounded-3" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <p class="card-title eposod-cards-info p-0 m-0"><small>Episode 3</small></p>
+                                    <p class="card-text eposod-cards-info p-0 m-0"><small><b>Lauren Stovall - Driven by
+                                                Legacy</b></small></p>
+                                    <p class="card-text eposod-cards-info p-0 m-0"><small>27m TV-G</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer p-0" id="contact">
+            <div class="p-5">
+                <div class="p-sm-1 p-md-5 p-lg-5 p-xl-5 p-xxl-5 footer-parent">
+                    <img src="images/contact-us.png" alt="" class="footer-image">
+                </div>
+                <div class="p-sm-1 p-md-5 p-lg-5 p-xl-5 p-xxl-5">
+                    <p class="text-white pt-5">StartHER TV does not accept or acknowledge unsolicited story ideas,
+                        scripts or
+                        manuscripts. <br>
+                        Sponsorships and Collaborations: <span style="color: #DF8656;">sponsor[at]starthertv.com</span>
+                        <br>
+                        Media inquiries: <span style="color: #DF8656;"> media[at]starthertv.com</span> <br>
+                        General information: <span style="color: #DF8656;">contact[at]starthertv.com</span>
+                    </p>
+                </div>
+
+                <div class="px-sm-1 px-md-5 px-lg-5 px-xl-5 px-xxl-5 pt-sm-1 pt-md-5 pt-lg-5 pt-xl-5 pt-xxl-5 pb-0">
+                    <p class="text-white"><b>
+                            <span class="footer-list"><a href="#home"
+                                    class="text-decoration-none text-white ">HOME</a></span>
+                            &nbsp &nbsp
+                            <span class="footer-list"><a href="#watch"
+                                    class="text-decoration-none text-white ">WATCH</a></span>
+                            &nbsp &nbsp
+
+                            <span class="footer-list"><a href="#contact"
+                                    class="text-decoration-none text-white ">CONTACT</a></span>
+                        </b></p>
+                    <div class="d-flex align-items-center pt-1">
+                        <a href="https://www.instagram.com/starthertv/" class="p-2"><img src="images/insta.png"
+                                alt=""></a>
+                        <a href="https://www.facebook.com/starthertv" class="p-2"><img src="images/fb.png" alt=""></a>
+                        <a href="https://www.youtube.com/channel/UC0FFn5RtA6U8mqiOz6x2G4g" class="p-2"><img
+                                src="images/yt.png" alt=""></a>
+                        <a href="#" class="p-2"><img src="images/linkedin.png" alt=""></a>
+                    </div>
+                    <p class="text-white mb-0 pt-2">Copyright 2023 StartHER TV, LLC. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- java script link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

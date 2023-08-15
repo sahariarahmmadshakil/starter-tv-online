@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- css link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <title>Starther TV</title>
+    <link rel="icon" type="favicon" href="images/favicon.ico">
+    <script>
+        (function (w, d, t, h, s, n) {
+            w.FlodeskObject = n;
+            var fn = function () {
+                (w[n].q = w[n].q || []).push(arguments);
+            };
+            w[n] = w[n] || fn;
+            var f = d.getElementsByTagName(t)[0];
+            var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+            var sm = d.createElement(t);
+            sm.async = true;
+            sm.type = 'module';
+            sm.src = h + s + '.mjs' + v;
+            f.parentNode.insertBefore(sm, f);
+            var sn = d.createElement(t);
+            sn.async = true;
+            sn.noModule = true;
+            sn.src = h + s + '.js' + v;
+            f.parentNode.insertBefore(sn, f);
+        })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+    </script>
+    <script>
+        (function (w, d, t, h, s, n) {
+            w.FlodeskObject = n;
+            var fn = function () {
+                (w[n].q = w[n].q || []).push(arguments);
+            };
+            w[n] = w[n] || fn;
+            var f = d.getElementsByTagName(t)[0];
+            var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+            var sm = d.createElement(t);
+            sm.async = true;
+            sm.type = 'module';
+            sm.src = h + s + '.mjs' + v;
+            f.parentNode.insertBefore(sm, f);
+            var sn = d.createElement(t);
+            sn.async = true;
+            sn.noModule = true;
+            sn.src = h + s + '.js' + v;
+            f.parentNode.insertBefore(sn, f);
+        })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+    </script>
+    <script>
+        (function (w, d, t, h, s, n) {
+            w.FlodeskObject = n;
+            var fn = function () {
+                (w[n].q = w[n].q || []).push(arguments);
+            };
+            w[n] = w[n] || fn;
+            var f = d.getElementsByTagName(t)[0];
+            var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+            var sm = d.createElement(t);
+            sm.async = true;
+            sm.type = 'module';
+            sm.src = h + s + '.mjs' + v;
+            f.parentNode.insertBefore(sm, f);
+            var sn = d.createElement(t);
+            sn.async = true;
+            sn.noModule = true;
+            sn.src = h + s + '.js' + v;
+            f.parentNode.insertBefore(sn, f);
+        })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+    </script>
+    <script>
+        (function (w, d, t, h, s, n) {
+            w.FlodeskObject = n;
+            var fn = function () {
+                (w[n].q = w[n].q || []).push(arguments);
+            };
+            w[n] = w[n] || fn;
+            var f = d.getElementsByTagName(t)[0];
+            var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+            var sm = d.createElement(t);
+            sm.async = true;
+            sm.type = 'module';
+            sm.src = h + s + '.mjs' + v;
+            f.parentNode.insertBefore(sm, f);
+            var sn = d.createElement(t);
+            sn.async = true;
+            sn.noModule = true;
+            sn.src = h + s + '.js' + v;
+            f.parentNode.insertBefore(sn, f);
+        })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+    </script>
+    <script>
+        window.fd('form', {
+            formId: '64b9837bcd56042d78f06e43'
+        });
+    </script>
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="container navbar nav-color fixed-top navbar-expand-lg navbar-expand-xl navbar-expand-xxl  py-0">
+            <div class="container-fluid ">
+                <a class="navbar-brand top-nav-image" href="index.html">
+                    <img src="images/logo-pink.png" alt="" class="starter-logo img-fluid ps-4"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end w-75" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: #708b89;">Close</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ps-2">
+                            <li class="nav-item ">
+                                <a class="nav-link nav-text-color" aria-current="page" href="#home"> <b>HOME</b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-text-color" href="#about"> <b>ABOUT</b></a>
+                            </li>
+                            <li class="nav-item dropdown tablet-dropdown">
+                                <a class="nav-link dropdown-toggle nav-text-color" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <b>WATCH</b>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
+                                    style="background-color: #df8656;">
+                                    <li><a class="dropdown-item  text-white" href="#jumpstart"><b>JUMPSTART </b></a>
+                                    </li>
+                                    <li class="ps-5"><a
+                                            class="dropdown-item  text-white border border-bottom-0 border-end-0 border-start-0  border-white ps-0"
+                                            href="#driven"><b>DRIVEN</b></a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown dropdown-pc">
+                                <a class="nav-link dropdown-toggle nav-text-color" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <b>WATCH</b>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
+                                    style="background-color: #df8656;">
+                                    <li><a class="dropdown-item  text-white" href="#jumpstart"><b>JUMPSTART </b></a>
+                                        <ul class="dropdown-menu dropdown-submenu" style="background-color: #df8656;">
+                                            <li>
+                                                <a class="dropdown-item text-center text-white" href="#driven"><b>DRIVEN
+                                                    </b></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-text-color" href="#blog"><b>BLOG </b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-text-color" href="#support"><b>SUPPORT OUR MISSION </b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-text-color" href="#contact"> <b>CONTACT</b></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <img src="images/corner-logo-new.png" alt="" class="corner-logo">
+        </nav>
+    </header>
+    <main class="main">
+        <!-- mobile home  -->
+        <section id="home">
+            <!-- this is mobile home  -->
+        </section>
+        <!-- header end  -->
+        <section class="container px-0 carosoul-parent" id="#">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+
+                    <!-- first carosoul  -->
+                    <div class="carousel-item active">
+                        <video src="videos/driven-1.webm" autoplay loop class="w-100">
+                            Your browser does not support the HTML5 Video element.
+                        </video>
+                        <div class="carousel-caption carousel-text ">
+                            <div class="fcb-area  ">
+                                <div class="carosoul-content">
+                                    <img src="images/starter-logo.png" alt="" class="img-fluid fc-image ">
+
+                                    <div class="carosoul-document p-2">
+                                        <p class="text-end mb-0 carosoul-paragraph">A streaming platform where
+                                            black & brown women entrepreneurs
+                                            take center stage.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- second carosoul  -->
+                    <div class="carousel-item ">
+                        <video src="videos/driven-2.webm" autoplay loop class="w-100">
+                            Your browser does not support the HTML5 Video element.
+                        </video>
+                        <div class="carousel-caption carousel-text-2 ">
+                            <div class="fcb-area-2 ">
+                                <div class="second-carosoul-content">
+                                    <img src="images/driven-logo.png" alt="" class="img-fluid fc-image-2">
+
+                                    <div class="w-100 second-carosoul-document">
+                                        <p class="text-end mb-0 carosoul-paragraph-2"> A day-in-the-life of four women
+                                            entrepreneurs showcasing
+                                            their process and shedding light on the motivations behind their ambition.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- third carosoul -->
+                    <div class="carousel-item">
+                        <video src="videos/driven-3.webm" autoplay loop class="w-100">
+                            Your browser does not support the HTML5 Video element.
+                        </video>
+                        <div class="carousel-caption third-carousel-text ">
+                            <div class="fcb-area-2">
+                                <div class="second-carosoul-content">
+                                    <img src="images/story-metter.png" alt="" class="img-fluid fc-image-3 ">
+
+                                    <div class="w-100 carosoul-document p-2 mt-sm-1">
+                                        <p class="text-end mb-0 carosoul-paragraph">When we see ourselves authentically
+                                            represented on
+                                            television and streaming platforms, we are more likely to believe that we,
+                                            too, can achieve great things .</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fourth carosoul  -->
+                    <div class="carousel-item ">
+                        <video src="videos/driven-4.webm" autoplay loop class="w-100">
+                            Your browser does not support the HTML5 Video element.
+                        </video>
+                        <div class="carousel-caption fourth-carousel-text ">
+                            <div class="fcb-area-2">
+                                <div class="second-carosoul-content">
+                                    <img src="images/suport-mission.png" alt="" class="img-fluid fc-image-4">
+
+                                    <div class="w-100 fourth-document p-2 ">
+                                        <p class="text-end mb-0 carosoul-paragraph-4">We are originators, not curators.
+                                            StartHER TV develops,
+                                            produces and exclusively distributes original, captivating and
+                                            transformative content that will inspire and empower viewers from all walks
+                                            of life.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev ms-0" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </section>
+        <section id="about">
+            <!-- this is mobile about  -->
+        </section>
+        <!-- about area  -->
+        <section class="container about-bg" id="#">
+            <div class="row">
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                    <div class="stream-area px-3 pt-3">
+                        <div>
+                            <img src="images/about-logo.png" alt="" class="about-logo img-fluid ">
+                            <p class="about-text">Our mission is to amplify the voices and stories of ambitious black
+                                and
+                                brown women with
+                                authenticity, originality and quality leaving an indelible impact on the hearts and
+                                minds of
+                                our viewers.
+                            </p>
+                            <p class="about-text"><b>Fresh content developed, produced by and distributed exclusively on
+                                    StartHER TV</b></p>
+                        </div>
+                        <div class="about-list ms-3 ">
+                            <div>
+                                <ul class="tringle-list-style">
+                                    <li class="about-text">Aspirational unscripted docu-follow series
+                                    </li>
+                                    <li class="about-text">Exhilirating competition shows
+
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="tringle-list-style">
+                                    <li class="about-text">Uplifting lifestyle programs
+                                    </li>
+                                    <li class="about-text">Gripping scripted limited series and movies
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold about-text py-4">Captivating, transformative stories led by black and
+                                brown women trailblazers</h5>
+                            <p class="about-text fs-5 pb-3">Let StartHER TV fuel your big dreams with inspiration and
+                                excitement.</p>
+                        </div>
+                        <div class=" button-area">
+                            <a href="https://www.paypal.com/donate/?hosted_button_id=2BZ76PDJ4TYJQ" class="give-btn">
+                                SUPORT OUR MISSION
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+
+                    <video autoplay loop muted class="img-fluid video-div" id="vid">
+                        <source src="videos/about.webm" type="video/webm" />
+                    </video>
+                    <script>
+                        document.getElementById('vid').play();
+                    </script>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- review area  -->
+
+        <section id="jumpstart">
+            <!-- this is mobile about  Jumpstart-->
+        </section>
+        <section class="container jumpstar-area " id="#">
+            <div class="row p-3 align-items-center d-flex">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 d-flex ">
+                    <div class="pt-3">
+                        <div class="pb-3">
+                            <img src="images/jumpstar-logo.png" alt="" class="about-logo ">
+                        </div>
+                        <div class="pt-2 ms-3">
+                            <p><b style="color: #EECAC0;">Coming soon:</b><span class="text-white"> Unleash the power of
+                                    StartHER TV's original </span><b style="color: #EECAC0;">"Jumpstart" series</b>
+                                <span class="text-white">and join us
+                                    in fueling our mission to create and share authentic, empowering content led by
+                                    women of
+                                    color.</span>
+                            </p>
+                        </div>
+                        <div class="py-2 ms-4">
+                            <ul class="tringle-list-style-2">
+                                <li class="text-white">Available on demand exclusively on StartHER TV (for a fee)
+                                </li>
+                                <li class="text-white">High-quality stories that will affirm and inspire you
+                                </li>
+                                <li class="text-white"> Help take back the narrative by supporting the growth of a black
+                                    woman-owned streaming platform
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div>
+                            <video controls="controls" src="videos/video.webm" class="w-100">
+                                Your browser does not support the HTML5 Video element.
+                            </video>
+                        </div>
+
+                        <div class=" px-sm-2  " id="form-area-bg">
+                            <div id="fd-form-637017795b16fe9549ad7e40"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ">
+                    <div class="d-flex justify-content-end align-items-center flex-column">
+                        <div class="d-flex justify-content-center">
+                            <img src="images/driven-persons.png" alt="" class="img-fluid">
+                        </div>
+                        <a href="stream-now.html" class="give-btn text-center my-4 fs-3 px-4">COMING SOON</a href="">
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <section id="driven">
+            <!-- this is mobile about  mobileDriven-->
+        </section>
+        <!-- watch area  -->
+        <section class="container watch-bg pb-4" id="#">
+            <div class="row  p-sm-2 p-md-5 p-lg-5 p-xl-5 p-xxl-5 py-4">
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 episode">
+                    <img src="images/driven.png" alt="" class="img-fluid">
+                    <p> A day-in-the-life of four women entrepreneurs. See their process.
+                        Get insight on the motivations behind their ambition.</p>
+                </div>
+                <div
+                    class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 d-flex align-items-center  justify-content-center">
+                    <button class="jumpstar-btn fw-bold">"JUMPSTART" SERIES</button>
+                </div>
+            </div>
+            <div class="px-sm-4 px-md-5 px-lg-5 px-xl-5 px-xxl-5">
+                <div class="row g-5">
+                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                        <div>
+                            <img src="images/img-4.png" alt="" class="img-fluid rounded">
+                        </div>
+                        <div class="pt-3">
+                            <p class="text-white">Episode 1</p>
+                            <h5 class="text-white">DRIVEN by Survival</h5>
+                            <p class="text-white">Latricia Wilder left a $300K job in media sales and emptied her
+                                retirement
+                                account in order to open a fitness studio - Vibe Ride Detroit. Circumstances beyond her
+                                control are threatening Vibe Ride Detroit’s survival. However, Latricia is determined to
+                                not
+                                go down without a fight.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                        <div>
+                            <img src="images/img-2.png" alt="" class="img-fluid rounded">
+                        </div>
+                        <div class="pt-3">
+                            <p class="text-white">Episode 2</p>
+                            <h5 class="text-white">DRIVEN by Mission</h5>
+                            <p class="text-white">South Central Los Angeles is being revitalized. Realtor Sunny Jones
+                                grew
+                                up in South Central during the tumultuous 1980’s. Sunny is on a mission to ensure that
+                                her
+                                community gets their piece of South Central’s new landscape via residential and
+                                commercial
+                                property ownership.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                        <div>
+                            <img src="images/img-1.png" alt="" class="img-fluid rounded">
+                        </div>
+                        <div class="pt-3 pe-4">
+                            <p class="text-white">Episode 3</p>
+                            <h5 class="text-white">DRIVEN by Confidence</h5>
+                            <p class="text-white">Breann Cook is the founder of the streetwear fashion brand, Ambition
+                                is
+                                the New Pink. She credits her success to her education, industry experience and her
+                                family.
+                                Now, Breann wants to pay it forward by sharing her knowledge in high schools across
+                                America.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                        <div>
+                            <img src="images/img-3.png" alt="" class="img-fluid rounded">
+                        </div>
+                        <div class="pt-3">
+                            <p class="text-white">Episode 4</p>
+                            <h5 class="text-white">DRIVEN by Legacy</h5>
+                            <p class="text-white">Lauren Stovall is a 2nd-generation black co-owner of Hot Sam’s – the
+                                oldest menswear clothing store in downtown Detroit. Hot Sam’s was founded by a Jewish
+                                family
+                                in 1921. Lauren’s father and his business partner purchased Hot Sam’s in 1994 after
+                                working
+                                at the store for 20 years. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fd-form-64bbe8bca7e0c006a6925113"></div>
+            <script>
+                window.fd('form', {
+                    formId: '64bbe8bca7e0c006a6925113',
+                    containerEl: '#fd-form-64bbe8bca7e0c006a6925113'
+                });
+            </script>
+
+        </section>
+        <section id="review">
+            <!-- this is mobile about  mobileReview-->
+        </section>
+        <section class="container jumpstar-review-area pt-4" id="#">
+            <div class="row p-3 align-items-start d-flex">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 d-flex ">
+                    <div class="pt-3">
+                        <div class="pb-3">
+                            <img src="images/driven-review.png" alt="" class="about-logo ">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <img src="images/driven-persons.png" alt="" class="img-fluid">
+                        </div>
+                        <div id="fd-form-64bbe9e77f66a496dc7f6b21"></div>
+                        <script>
+                            window.fd('form', {
+                                formId: '64bbe9e77f66a496dc7f6b21',
+                                containerEl: '#fd-form-64bbe9e77f66a496dc7f6b21'
+                            });
+                        </script>
+
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ">
+                    <button class="jumpstar-review-btn  fw-bold">"JUMPSTART" SERIES</button>
+                    <div class="jumpstar-paragraph">
+                        <p class="text-white pt-4">This documentary is more than a peek behind the veil of successful
+                            black women entrepreneurs,
+                            it is an invitation to actually see the woman for who they are...all they stand for...and
+                            what drives their passion, purpose and authenticity.</p>
+                        <p class="common-color-sayan pb-3">- Antoinette Arrington, Founder - HAUME | @haumexofficial</p>
+                        <p class="text-white">These stories are important to demonstrate the different steps and
+                            measures that it takes to
+                            succeed as an African American entrepreneur. </p>
+                        <p class="common-color-sayan pb-3">- Regina DuBose, Founder - The Alexis Company </p>
+                        <p class="text-white">DRIVEN was phenomenal!!! This series truly shows the perspective of WOC
+                            entrepreneurs with
+                            real and raw emotion in real time. Each episode is inspiring, uplifting and encouraging.
+                            It's a must see for small business owners!! Highly recommend! </p>
+                        <p class="common-color-sayan pb-3">- Jessica Hollins, Founder - Signed by Blueprint |
+                            @sxbleuprnt</p>
+                        <p class="text-white">DRIVEN is a must-watch for anyone interested in the world of business and
+                            startups. The show
+                            is both inspiring and informative, with plenty of valuable takeaways. The cast of
+                            entrepreneurs are diverse, dynamic and relatable.</p>
+                        <p class="common-color-sayan pb-3">- Marcy Lee | IG @thetallchicwiththelocs </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <section id="blog">
+            <!-- this is mobile about Blog-->
+        </section>
+        <section class="blogs container" id="#">
+            <section class="banner-video-area container">
+                <video autoplay loop muted src="videos/blog-banner.webm" class="img-fluid"></video>
+            </section>
+            <!-- behind the scene area  -->
+            <section class="container blog-banner-area-parent py-4" id="watch">
+                <div class="mx-4">
+                    <div class="card mb-5 mx-auto " style="max-width: 1366px;">
+                        <div class="row g-0 ">
+                            <div class="col-md-7">
+                                <img src="images/blog - hot sams.png" class="img-fluid rounded-start w-100" alt="...">
+                            </div>
+
+                            <!-- change the top part from here  -->
+
+                            <div class="col-md-5 d-flex align-items-center ">
+                                <div class="card-body">
+
+                                    <p class="common-color-sayan ps-sm-2 ps-md-2 ps-lg-4 ps-xl-4 ps-xxl-4">
+                                        Aug 5, 2023
+                                    </p>
+
+                                    <h5 class="common-color-sayan ps-sm-2 ps-md-2 ps-lg-4 ps-xl-4 ps-xxl-4">
+                                        We Filmed DRIVEN at Some Amazing Black-Owned Locations
+                                    </h5>
+
+                                    <p class="common-color-sayan ps-sm-2 ps-md-2 ps-lg-4 ps-xl-4 ps-xxl-4">
+
+                                        One thing we were absolutely intentional about was showcasing and
+                                        supporting black-owned businesses as our filming locations for DRIVEN.<br>
+                                      <!-- link area    -->
+                                        <a href="blogs/driven_locations.html" target="_blank"
+                                            class="read-more text-danger">Read more...</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row g-5 px-4">
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                        <div>
+                            <img src="images/Card-image-1.png" alt="" class="img-fluid border border-2">
+                        </div>
+                        <div class="pt-3 pe-4">
+                            <p class="text-white">Jul 29, 2023 </p>
+                            <h5 class="text-white">Meet Our Videographer – Desmond Touchstone</h5>
+                            <p class="text-white">We are passionate about crafting compelling stories, and that's why we
+                                always strive to collaborate with exceptional creative artists.
+
+                                <br>
+                                <a href="blogs/meet-videographer.html" target="_blank"
+                                    class="read-more text-danger">Read more...</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                        <div>
+                            <img src="images/driven-ladish.png" alt="" class="img-fluid border border-2">
+                        </div>
+
+                        <div class="pt-3">
+                            <p class="text-white">Jul 22, 2023 </p>
+                            <h5 class="text-white">Meet the Ladies of DRIVEN
+                            </h5>
+                            <p class="text-start text-white">Step into the captivating world of StartHER TV's inaugural
+                                "Jumpstart"
+                                series - <b>DRIVEN</b>. Discover the lives of a remarkable group of women of
+                                color entrepreneurs like never before, as they generously share their exclusive
+                                day-to-day experiences. <br>
+                                <a href="blogs/meet-ladies.html" target="_blank" class="read-more text-danger">Read
+                                    more...</a>
+                            </p>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- to add blogs just cipy this one and paste  -->
+
+                    <!-- ******************************************************************** -->
+
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                        <div>
+                            <img src="images/Card-image-3.png" alt="" class="img-fluid border border-2">
+                        </div>
+                        <div class="pt-3">
+                            <p class="text-white">Jul 15, 2023</p>
+                            <h5 class="text-white">Lights, Camera, Action! Making DRIVEN - Our First “Jumpstart” Series
+                            </h5>
+                            <p class="text-white">StartHER TV’s upcoming “Jumpstart” series initiative is our
+                                game-changing approach to crowdfunding original content.
+
+                                <br>
+                                <a href="blogs/making-driven.html" target="_blank" class="read-more text-danger">Read
+                                    more...</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ******************************************************************** -->
+
+
+
+                </div>
+
+            </section>
+        </section>
+        <section id="support">
+            <!-- this is mobile about  Support-->
+        </section>
+        <!-- Suport mission area-->
+        <section class="container mission-bg" id="#">
+            <div class="row message-area">
+                <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7 support-body">
+                    <div class="stream-area px-3 pt-5">
+                        <img src="images/suport-logo.png" alt="" class="stream-logo img-fluid w-75">
+                        <h2 class="text-white fw-bold pt-2">A message from our founder:</h2>
+                        <p class="text-white pt-2">
+                            <strong class="fs-5">“Black people on TV!”</strong> <br> <br>
+                            Growing up, any appearance of a black person on television was a symbol of excellence and a
+                            very big deal. However, today's representation, especially of black women, has regressed
+                            into harmful stereotypes.
+                            With StartHER TV, my goal is to change that by showcasing black and brown women's
+                            creativity, resilience, and humanity, leaving viewers feeling empowered and hopeful.
+                            Our unique focus on black and brown women entrepreneurs, through unscripted and scripted
+                            content, sets StartHER TV apart and empowers us to take control of our narratives.
+
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-around align-items-center button-area">
+                        <h5 class="text-white ps-3">Help support our mission.</h5>
+                        <a class="give-btn"
+                            href="https://www.paypal.com/donate/?hosted_button_id=2BZ76PDJ4TYJQ">GIVE</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                    <img src="images/ceo.png" alt="" class="img-fluid ceo-image">
+                    <button class="ceo">Judith Norman | Founder, StartHER TV </button>
+                </div>
+                <!-- <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+
+                    <video autoplay loop muted class="img-fluid video-div" id="vid">
+                        <source src="videos/about.mp4" type="video/mp4" />
+                    </video>
+                    <script>
+                        document.getElementById('vid').play();
+                    </script>
+                    <button class="ceo">Judith Norman | Founder, StartHER TV </button>
+
+                </div> -->
+            </div>
+        </section>
+
+        <!-- footer  -->
+        <footer class="container footer p-0" id="contact">
+            <div class="p-5">
+                <div class="p-sm-1 p-md-5 p-lg-5 p-xl-5 p-xxl-5 footer-parent">
+                    <img src="images/contact-us.png" alt="" class="footer-image">
+                </div>
+                <div class="p-sm-1 p-md-5 p-lg-5 p-xl-5 p-xxl-5">
+                    <p class="text-white pt-5">StartHER TV does not accept or acknowledge unsolicited story ideas,
+                        scripts or
+                        manuscripts. <br>
+                        Sponsorships and Collaborations: <span style="color: #DF8656;">sponsor[at]starthertv.com</span>
+                        <br>
+                        Media inquiries: <span style="color: #DF8656;"> media[at]starthertv.com</span> <br>
+                        General information: <span style="color: #DF8656;">contact[at]starthertv.com</span>
+                    </p>
+                </div>
+
+                <div class="px-sm-1 px-md-5 px-lg-5 px-xl-5 px-xxl-5 pt-sm-1 pt-md-5 pt-lg-5 pt-xl-5 pt-xxl-5 pb-0">
+                    <p class="text-white"><b>
+                            <span class="footer-list"><a href="#home"
+                                    class="text-decoration-none text-white ">HOME</a></span>
+                            &nbsp &nbsp
+                            <span class="footer-list"> <a href="#about"
+                                    class="text-decoration-none text-white ">ABOUT</a></span> &nbsp
+                            &nbsp
+                            <span class="footer-list"><a href="#jumpstart"
+                                    class="text-decoration-none text-white ">WATCH</a></span>
+                            &nbsp &nbsp
+                            <span class="footer-list"><a href="#blog"
+                                    class="text-decoration-none text-white ">BLOG</a></span>
+                            &nbsp &nbsp
+                            &nbsp &nbsp
+                            <span class="footer-list"><a href="#support"
+                                    class="text-decoration-none text-white ">SUPPORT OUR MISSION</a></span>
+                            &nbsp &nbsp
+                            <span class="footer-list"><a href="#contact"
+                                    class="text-decoration-none text-white ">CONTACT</a></span>
+                        </b></p>
+                    <div class="d-flex align-items-center pt-1">
+                        <a href="https://www.instagram.com/starthertv/" class="p-2"><img src="images/insta.png"
+                                alt=""></a>
+                        <a href="https://www.facebook.com/starthertv" class="p-2"><img src="images/fb.png" alt=""></a>
+                        <a href="https://www.youtube.com/channel/UC0FFn5RtA6U8mqiOz6x2G4g" class="p-2"><img
+                                src="images/yt.png" alt=""></a>
+                        <a href="#" class="p-2"><img src="images/linkedin.png" alt=""></a>
+                    </div>
+                    <p class="text-white mb-0 pt-2">Copyright 2023 StartHER TV, LLC. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- form Script  -->
+    <script>
+        window.fd('form', {
+            formId: '637017795b16fe9549ad7e40',
+            containerEl: '#fd-form-637017795b16fe9549ad7e40'
+        });
+    </script>
+
+    <!-- java script link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
